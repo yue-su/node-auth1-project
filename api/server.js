@@ -8,6 +8,7 @@ const dbConnection = require("../database/connection")
 
 const usersRouter = require("../user/users-router")
 const server = express()
+require("dotenv").config()
 
 const sessionConfiguration = {
   name: "monster", //default value is sid
