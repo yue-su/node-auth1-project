@@ -1,7 +1,7 @@
 const router = require("express").Router()
 const bcrypt = require("bcryptjs")
 const Users = require("./users-model.js")
-require("dotenv").config()
+//require("dotenv").config()
 
 router.get("/users", authenticate, (req, res) => {
   Users.find()
