@@ -14,7 +14,7 @@ router.get("/users", authenticate, (req, res) => {
 router.post("/register", (req, res) => {
   let creds = req.body
   const rounds = process.env.HASH_ROUNDS || 4
-  const hash = bcrypt.hashSync(creds.password, rounds)
+  const hash = bcrypt.hashSync(creds.password, Number(rounds))
 
   creds.password = hash
 
